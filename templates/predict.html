@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <h2>Enter Details for Prediction</h2>
+    <form method="POST" action="/predict">
+        <label for="account_length">Account Length:</label><br>
+        <input type="number" step="any" id="account_length" name="account_length" required><br><br>
+
+        <label for="area_code">Area Code:</label><br>
+        <input type="number" step="any" id="area_code" name="area_code" required><br><br>
+
+        <label for="number_vmail_messages">Number of Voicemail Messages:</label><br>
+        <input type="number" step="any" id="number_vmail_messages" name="number_vmail_messages" required><br><br>
+
+        <label for="total_day_minutes">Total Day Minutes:</label><br>
+        <input type="number" step="any" id="total_day_minutes" name="total_day_minutes" required><br><br>
+
+        <label for="total_day_calls">Total Day Calls:</label><br>
+        <input type="number" step="any" id="total_day_calls" name="total_day_calls" required><br><br>
+
+        <label for="total_day_charge">Total Day Charge:</label><br>
+        <input type="number" step="any" id="total_day_charge" name="total_day_charge" required><br><br>
+
+        <label for="total_eve_minutes">Total Evening Minutes:</label><br>
+        <input type="number" step="any" id="total_eve_minutes" name="total_eve_minutes" required><br><br>
+
+        <label for="total_eve_calls">Total Evening Calls:</label><br>
+        <input type="number" step="any" id="total_eve_calls" name="total_eve_calls" required><br><br>
+
+        <label for="total_eve_charge">Total Evening Charge:</label><br>
+        <input type="number" step="any" id="total_eve_charge" name="total_eve_charge" required><br><br>
+
+        <label for="total_night_minutes">Total Night Minutes:</label><br>
+        <input type="number" step="any" id="total_night_minutes" name="total_night_minutes" required><br><br>
+
+        <label for="total_night_calls">Total Night Calls:</label><br>
+        <input type="number" step="any" id="total_night_calls" name="total_night_calls" required><br><br>
+
+        <label for="total_night_charge">Total Night Charge:</label><br>
+        <input type="number" step="any" id="total_night_charge" name="total_night_charge" required><br><br>
+
+        <label for="total_intl_minutes">Total International Minutes:</label><br>
+        <input type="number" step="any" id="total_intl_minutes" name="total_intl_minutes" required><br><br>
+
+        <label for="total_intl_calls">Total International Calls:</label><br>
+        <input type="number" step="any" id="total_intl_calls" name="total_intl_calls" required><br><br>
+
+        <label for="total_intl_charge">Total International Charge:</label><br>
+        <input type="number" step="any" id="total_intl_charge" name="total_intl_charge" required><br><br>
+
+        <label for="customer_service_calls">Customer Service Calls:</label><br>
+        <input type="number" step="any" id="customer_service_calls" name="customer_service_calls" required><br><br>
+
+        <label for="state">State (Numeric):</label><br>
+        <input type="number" step="any" id="state" name="state" required><br><br>
+
+        <label for="international_plan">International Plan (1 for Yes, 0 for No):</label><br>
+        <input type="number" step="any" id="international_plan" name="international_plan" required><br><br>
+
+        <label for="voice_mail_plan">Voicemail Plan (1 for Yes, 0 for No):</label><br>
+        <input type="number" step="any" id="voice_mail_plan" name="voice_mail_plan" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

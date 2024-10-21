@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="account_length">feat_0:</label>
+        <input type="text" name="feat_0" required><br>
+        <label for="account_length">feat_2:</label>
+        <input type="text" name="feat_2" required><br>
+        <label for="account_length">feat_4:</label>
+        <input type="text" name="feat_4" required><br>
+        <label for="account_length">feat_6:</label>
+        <input type="text" name="feat_6" required><br>
+        <label for="area_code">feat_7:</label>
+        <input type="text" name="feat_7" required><br>
+        <label for="number_vmail_messages">feat_10:</label>
+        <input type="text" name="feat_10" required><br>
+        <label for="total_day_minutes">feat_11:</label>
+        <input type="text" name="feat_11" required><br>
+        <label for="account_length">feat_13:</label>
+        <input type="text" name="feat_13" required><br>
+        <label for="account_length">feat_15:</label>
+        <input type="text" name="feat_15" required><br>
+        <label for="account_length">feat_16:</label>
+        <input type="text" name="feat_16" required><br>
+        <label for="account_length">feat_17:</label>
+        <input type="text" name="feat_17" required><br>
+        <label for="account_length">feat_18:</label>
+        <input type="text" name="feat_18" required><br>
+        <label for="account_length">feat_19:</label>
+        <input type="text" name="feat_19" required><br>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>

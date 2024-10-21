@@ -1,0 +1,131 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #444;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="account_length">Account Length:</label><br>
+        <input type="number" step="any" id="account_length" name="account_length" required><br><br>
+
+        <label for="area_code">Area Code:</label><br>
+        <input type="number" step="any" id="area_code" name="area_code" required><br><br>
+
+        <label for="number_vmail_messages">Number of Voicemail Messages:</label><br>
+        <input type="number" step="any" id="number_vmail_messages" name="number_vmail_messages" required><br><br>
+
+        <label for="total_day_minutes">Total Day Minutes:</label><br>
+        <input type="number" step="any" id="total_day_minutes" name="total_day_minutes" required><br><br>
+
+        <label for="total_day_calls">Total Day Calls:</label><br>
+        <input type="number" step="any" id="total_day_calls" name="total_day_calls" required><br><br>
+
+        <label for="total_day_charge">Total Day Charge:</label><br>
+        <input type="number" step="any" id="total_day_charge" name="total_day_charge" required><br><br>
+
+        <label for="total_eve_minutes">Total Evening Minutes:</label><br>
+        <input type="number" step="any" id="total_eve_minutes" name="total_eve_minutes" required><br><br>
+
+        <label for="total_eve_calls">Total Evening Calls:</label><br>
+        <input type="number" step="any" id="total_eve_calls" name="total_eve_calls" required><br><br>
+
+        <label for="total_eve_charge">Total Evening Charge:</label><br>
+        <input type="number" step="any" id="total_eve_charge" name="total_eve_charge" required><br><br>
+
+        <label for="total_night_minutes">Total Night Minutes:</label><br>
+        <input type="number" step="any" id="total_night_minutes" name="total_night_minutes" required><br><br>
+
+        <label for="total_night_calls">Total Night Calls:</label><br>
+        <input type="number" step="any" id="total_night_calls" name="total_night_calls" required><br><br>
+
+        <label for="total_night_charge">Total Night Charge:</label><br>
+        <input type="number" step="any" id="total_night_charge" name="total_night_charge" required><br><br>
+
+        <label for="total_intl_minutes">Total International Minutes:</label><br>
+        <input type="number" step="any" id="total_intl_minutes" name="total_intl_minutes" required><br><br>
+
+        <label for="total_intl_calls">Total International Calls:</label><br>
+        <input type="number" step="any" id="total_intl_calls" name="total_intl_calls" required><br><br>
+
+        <label for="total_intl_charge">Total International Charge:</label><br>
+        <input type="number" step="any" id="total_intl_charge" name="total_intl_charge" required><br><br>
+
+        <label for="customer_service_calls">Customer Service Calls:</label><br>
+        <input type="number" step="any" id="customer_service_calls" name="customer_service_calls" required><br><br>
+
+        <label for="state">State (Numeric):</label><br>
+        <input type="number" step="any" id="state" name="state" required><br><br>
+
+        <label for="international_plan">International Plan (1 for Yes, 0 for No):</label><br>
+        <input type="number" step="any" id="international plan" name="international plan" required><br><br>
+
+        <label for="voice_mail_plan">Voicemail Plan (1 for Yes, 0 for No):</label><br>
+        <input type="number" step="any" id="voice mail plan" name="voice mail plan" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>

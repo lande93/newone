@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="account_length">Account Length:</label>
+        <input type="text" name="account_length" required><br>
+        <label for="account_length">state:</label>
+        <input type="text" name="state" required><br>
+        <label for="account_length">international plan:</label>
+        <input type="text" name="international plan" required><br>
+        <label for="account_length">voice mail plan:</label>
+        <input type="text" name="voice mail plan" required><br>
+        <label for="area_code">Area Code:</label>
+        <input type="text" name="area_code" required><br>
+        <label for="number_vmail_messages">Number Vmail Messages:</label>
+        <input type="text" name="number_vmail_messages" required><br>
+        <label for="total_day_minutes">Total Day Minutes:</label>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
