@@ -42,4 +42,4 @@ def predict():
         return render_template('deploy.html', prediction_text='Customer churn prediction: {}'.format(output))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
