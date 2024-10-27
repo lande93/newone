@@ -5,5 +5,3 @@ matplotlib
 seaborn
 flask
 joblib
-gunicorn
-pickle-mixin

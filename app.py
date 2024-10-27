@@ -2,8 +2,8 @@ from flask import Flask, request, render_template
 import pickle
 import numpy as np
 
-app = Flask(__name__)
-
+application = Flask(__name__)
+app=application
 # Load the model
 load_model=pickle.load(open('savedmodel.sav','rb'))
 
@@ -44,3 +44,4 @@ def predict():
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000)
     #debug=True
+    #app.run(host='0.0.0.0', port=8080) 
