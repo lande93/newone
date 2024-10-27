@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 application = Flask(__name__)
 app=application
+# make move
 # Load the model
 load_model=pickle.load(open('savedmodel.sav','rb'))
 
